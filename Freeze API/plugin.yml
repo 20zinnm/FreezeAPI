@@ -2,14 +2,3 @@ name: Freeze API
 version: 0.1
 main: freeze.freeze
 author: 20zinnm
-commands:
-  freeze:
-    description: Freeze a player in place! They won't be able to move.
-    usage: /freeze [FULL PlayerName]
-    permission: freeze.freeze
-    permission-message: Avast ye! A player with incorrect permissions ho!
-  unfreeze:
-    description: Unfreeze a player!
-    usage: /unfreeze [FULL PlayerName]
-    permission: freeze.unfreeze
-    permission-message: Avast ye! A player with incorrect permissions ho!

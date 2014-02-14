@@ -9,8 +9,11 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
+import freeze.Freeze;
+
 public class Listeners implements Listener {
 
+	@SuppressWarnings("static-access")
 	@EventHandler
 	public void onPlayerMove(PlayerMoveEvent e) {
 		if (Arrays.asList(Freeze.frozen).contains(e.getPlayer())) {
