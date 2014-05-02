@@ -21,6 +21,7 @@ public class Listeners implements Listener {
 		if (Arrays.asList(Freeze.frozen).contains(e.getPlayer())) {
 			e.setCancelled(true);
 			e.getPlayer().sendMessage(ChatColor.DARK_AQUA + "You can't move! Your" + ChatColor.WHITE.ITALIC + "frozen!");
+			Bukkit.getServer().getPluginManager().callEvent(new PlayerMoveWhileFrozen(e.getPlayer()));
 		}
 	}
 	
@@ -28,7 +29,7 @@ public class Listeners implements Listener {
 	public void onPlayerQuit(PlayerQuitEvent e) {
 		if (Arrays.asList(Freeze.frozen).contains(e.getPlayer())) {
 			Arrays.asList(Freeze.frozen).remove(e.getPlayer());
-			Bukkit.getServer().getPluginManager().callEvent(new PlayerUnfrozenEvent(e.getPlayer()));
+			Bukkit.getServer().getPluginManager().callEvent(new PlayerUnfrozen(e.getPlayer()));
 		}
 	}
 	@SuppressWarnings("static-access")

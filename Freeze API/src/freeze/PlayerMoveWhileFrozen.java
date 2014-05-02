@@ -4,11 +4,11 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-public class PlayerFrozenEvent extends Event {
+public class PlayerMoveWhileFrozen extends Event {
 	
 	Player p;
 	
-	public PlayerFrozenEvent(Player p) {
+	public PlayerMoveWhileFrozen(Player p) {
 		this.p = p;
 	}
 	

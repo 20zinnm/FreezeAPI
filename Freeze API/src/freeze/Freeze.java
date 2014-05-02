@@ -19,12 +19,18 @@ public class Freeze extends JavaPlugin {
 	}
 	
 	public static void freezePlayer(Player p) {
+		if (Arrays.asList(Freeze.frozen).contains(p)) {
+			return;
+		}
 		Arrays.asList(Freeze.frozen).add(p);
-		Bukkit.getServer().getPluginManager().callEvent(new PlayerFrozenEvent(p));
+		Bukkit.getServer().getPluginManager().callEvent(new PlayerFrozen(p));
 	}
 	public static void unfreezePlayer(Player p) {
+		if (!Arrays.asList(Freeze.frozen).contains(p)) {
+			return;
+		}
 		Arrays.asList(Freeze.frozen).remove(p);
-		Bukkit.getServer().getPluginManager().callEvent(new PlayerUnfrozenEvent(p));
+		Bukkit.getServer().getPluginManager().callEvent(new PlayerUnfrozen(p));
 	}
 	
 }
