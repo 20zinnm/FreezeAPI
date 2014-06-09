@@ -1,4 +1,4 @@
 name: Freeze API
-version: 0.1
-main: freeze.freeze
+version: 0.2
+main: Freeze.freeze
 author: 20zinnm
