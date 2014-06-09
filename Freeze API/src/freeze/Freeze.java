@@ -11,11 +11,11 @@ public class Freeze extends JavaPlugin {
 	public static Player[] frozen;
 	
 	public void onEnable() {
-		getLogger().info("Freeze API version 0.2 Enabled!");
+		getLogger().info("Freeze API version 1.0 Enabled!");
 		getServer().getPluginManager().registerEvents(new Listeners(), this);
 	}
 	public void onDisable() {
-		getLogger().info("Freeze API version 0.2 Disabled!");
+		getLogger().info("Freeze API version 1.0 Disabled!");
 	}
 	
 	public static void freezePlayer(Player p) {
